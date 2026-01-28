@@ -244,6 +244,72 @@
             text-align: right;
         }
         
+        /* Education Section */
+        .education-item {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--highlight);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .education-degree {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .education-school {
+            font-size: 1.05rem;
+            color: var(--highlight);
+            font-weight: 600;
+        }
+        
+        .education-date {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .education-highlights {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .education-highlights li {
+            padding-left: 25px;
+            margin-bottom: 8px;
+            position: relative;
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .education-highlights li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
         /* Experience Section */
         .experience-item {
             background: white;
@@ -312,7 +378,7 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
         
@@ -356,6 +422,40 @@
             background: var(--highlight);
             color: white;
             border-color: var(--highlight);
+        }
+        
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .cert-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--highlight);
+            transition: transform 0.3s ease;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .cert-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .cert-score {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--highlight);
+            font-family: 'JetBrains Mono', monospace;
         }
         
         /* Interests Section */
@@ -475,7 +575,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .experience-header {
+            .experience-header, .education-header {
                 flex-direction: column;
             }
             
@@ -496,6 +596,7 @@
             <div class="logo">KYS</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -524,7 +625,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>I'm a Computer Engineering student at UC San Diego with a passion for AI research and ethical technology development. Currently, I'm investigating bias-aware AI classification systems as part of the CSE Early Research Scholars Program.</p>
-                    <p style="margin-top: 20px;">Beyond academics, I enjoy exploring new restaurants (especially matcha spots!), snorkeling, and playing badminton. I bring the same curiosity and enthusiasm to my technical projects as I do to discovering new experiences.</p>
+                    <p style="margin-top: 20px;">As an Engineering Faculty Ambassador at UCSD, I help prospective students navigate their academic journey. Beyond academics, I enjoy exploring new restaurants (especially matcha spots!), snorkeling, and playing badminton.</p>
                 </div>
                 <div class="info-box">
                     <div class="info-item">
@@ -540,10 +641,71 @@
                         <span class="info-value">December 2027</span>
                     </div>
                     <div class="info-item">
+                        <span class="info-label">IELTS Score</span>
+                        <span class="info-value">7.5</span>
+                    </div>
+                    <div class="info-item">
                         <span class="info-label">Availability</span>
                         <span class="info-value">June - Sept 2025</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="education-degree">Bachelor of Science in Computer Engineering</div>
+                        <div class="education-school">University of California, San Diego</div>
+                    </div>
+                    <div class="education-date">Expected Dec 2027</div>
+                </div>
+                <ul class="education-highlights">
+                    <li>Engineering Faculty Ambassador</li>
+                    <li>Research Assistant, CSE Early Research Scholars Program (ERSP)</li>
+                </ul>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="education-degree">General Certificate of Education (A-Levels)</div>
+                        <div class="education-school">Kolej Yayasan UEM</div>
+                    </div>
+                    <div class="education-date">2024</div>
+                </div>
+                <ul class="education-highlights">
+                    <li>A-Levels: 2A* 2A (Further Mathematics, Mathematics, Chemistry, Physics)</li>
+                    <li>Secretary, Badminton Club</li>
+                    <li>Student Ambassador</li>
+                    <li>Co-Founder and Treasurer, Game Development Club</li>
+                    <li>Silver Medal, Badminton Tournament, Mixed Doubles Category</li>
+                </ul>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="education-degree">Malaysian Certificate of Education (SPM)</div>
+                        <div class="education-school">MRSM Tun Ghafar Baba</div>
+                    </div>
+                    <div class="education-date">2022</div>
+                </div>
+                <ul class="education-highlights">
+                    <li>SPM: 8A+ 1A</li>
+                    <li>Duke of Edinburgh International Bronze Award</li>
+                    <li>Champion, Project Mathematics Supreme League - SeMalaysia</li>
+                    <li>The Best Student Award for SPM MRSM</li>
+                    <li>The Best Student Award for Physics Subject (Semester 2)</li>
+                    <li>Honourable Principal Award (All Semesters)</li>
+                    <li>Head Mentor for Chemistry Subject</li>
+                    <li>Homeroom Secretary</li>
+                    <li>Vice President, Crime Prevention Club</li>
+                </ul>
             </div>
         </section>
 
@@ -557,7 +719,7 @@
                         <div class="experience-title">Research Assistant</div>
                         <div class="experience-org">CSE Early Research Scholars Program (ERSP) — UCSD</div>
                     </div>
-                    <div class="experience-date">Fall 2025 - Present</div>
+                    <div class="experience-date">Sep 2025 - Present</div>
                 </div>
                 <ul class="experience-description">
                     <li>Collaborating on research investigating AI classification of race, gender, and ethnicity, with a focus on ethical and bias-aware AI design</li>
@@ -571,9 +733,9 @@
                 <div class="experience-header">
                     <div>
                         <div class="experience-title">Primary School Teacher</div>
-                        <div class="experience-org">Elementary School</div>
+                        <div class="experience-org">SJKC Dengkil</div>
                     </div>
-                    <div class="experience-date">Summer 2024</div>
+                    <div class="experience-date">Jun 2024 - Sep 2024</div>
                 </div>
                 <ul class="experience-description">
                     <li>Served as homeroom teacher for 8-year-old students, managing daily classroom operations, student records, and coordination with school staff</li>
@@ -594,8 +756,17 @@
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
                         <span class="skill-tag">MATLAB</span>
                         <span class="skill-tag">R</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Software</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">MS Excel</span>
+                        <span class="skill-tag">MS PowerPoint</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -614,6 +785,17 @@
                         <span class="skill-tag">Mandarin (Traditional)</span>
                         <span class="skill-tag">Malay</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-name">IELTS Certificate</div>
+                    <div class="cert-score">7.5</div>
                 </div>
             </div>
         </section>
