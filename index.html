@@ -61,10 +61,22 @@
         }
         
         .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-weight: 600;
+            font-size: 1.1rem;
             color: var(--matcha-dark);
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
         
         .nav-links {
@@ -473,41 +485,6 @@
             border-color: var(--strawberry-medium);
         }
         
-        /* Certifications Section */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .cert-card {
-            background: linear-gradient(135deg, var(--matcha-pale) 0%, var(--strawberry-pale) 100%);
-            padding: 35px;
-            border-radius: 15px;
-            border: 2px solid var(--strawberry-light);
-            box-shadow: 0 4px 20px rgba(212, 135, 156, 0.1);
-            transition: transform 0.3s ease;
-            text-align: center;
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .cert-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--matcha-dark);
-            margin-bottom: 10px;
-        }
-        
-        .cert-score {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--strawberry-dark);
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
         /* Interests Section */
         .interests-grid {
             display: grid;
@@ -676,12 +653,16 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">KYS</div>
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Kai Yee's Space">
+                <span class="logo-text">Kai Yee's Space</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -722,10 +703,6 @@
                     <div class="info-item">
                         <span class="info-label">Graduation</span>
                         <span class="info-value">June 2027</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">IELTS Score</span>
-                        <span class="info-value">7.5</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">Availability</span>
@@ -872,20 +849,9 @@
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-name">IELTS Certificate</div>
-                    <div class="cert-score">7.5</div>
-                </div>
-            </div>
-        </section>
-
         <!-- Interests Section -->
         <section id="interests">
-            <h2 class="section-title">Beyond The Code</h2>
+            <h2 class="section-title">Interests</h2>
             <div class="interests-grid">
                 <div class="interest-card">
                     <div class="interest-icon">🍵</div>
@@ -913,7 +879,7 @@
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <a href="/cdn-cgi/l/email-protection#cda6aca4b4a8a8bea4a08daaa0aca4a1e3aea2a0"><span class="__cf_email__" data-cfemail="8ee5efe7f7ebebfde7e3cee9e3efe7e2a0ede1e3">[email&#160;protected]</span></a>
+                    <a href="mailto:kaiyeesim@gmail.com">kaiyeesim@gmail.com</a>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">💼</div>
@@ -925,3 +891,8 @@
     </div>
 
     <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kai Yee Sim. Available for Summer 2025 Internships (June - September)</p>
+    </footer>
+</body>
+</html>
