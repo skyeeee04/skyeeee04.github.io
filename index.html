@@ -68,8 +68,10 @@
         }
         
         .logo img {
-            height: 45px;
-            width: auto;
+            height: 50px;  /* increased slightly for better visibility */
+            width: 50px;   /* added width to maintain square aspect */
+            object-fit: contain;  /* ensures the image scales properly */
+            display: block;
         }
         
         .logo-text {
